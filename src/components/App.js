@@ -4,7 +4,7 @@ import './../styles/App.css';
 import WeatherDisplay from "./WeatherDisplay";
 
 const App = () => {
-  const[weatherData, setWetherData] = useState({temperature: 0, conditions: ""});
+  const[weatherData, setWetherData] = useState({temperature: 25, conditions: "Sunny"});
   const [tempInput, SettempInput] = useState('');
   const [condInput, setCondInput] = useState('');
 
@@ -17,7 +17,9 @@ const App = () => {
   }
 
   useEffect(()=>{
-          setWetherData({temperature: parseInt(tempInput,10), conditions: condInput});
+    if (tempInput !== '' && condInput !== '') {
+      setWeatherData({ temperature: parseInt(tempInput, 10), conditions: condInput });
+    }
   }, [tempInput,condInput]);
 
 
