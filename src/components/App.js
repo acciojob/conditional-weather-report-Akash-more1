@@ -4,7 +4,7 @@ import './../styles/App.css';
 import WeatherDisplay from "./WeatherDisplay";
 
 const App = () => {
-  const[weatherData, setWetherData] = useState({temperature: 25, conditions: "Sunny"});
+  const[weatherData, setWeatherData] = useState({temperature: 25, conditions: "Sunny"});
   const [tempInput, SettempInput] = useState('');
   const [condInput, setCondInput] = useState('');
 
